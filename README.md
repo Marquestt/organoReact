@@ -1,3 +1,10 @@
+# Organo | Front End - JavaScript e React
+---
+
+### Projeto Organo densenvolvido para o curso da ONE em parceria com a Alura, utilizando html, css, javascript e react!
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
