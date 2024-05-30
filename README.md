@@ -1,7 +1,8 @@
 # Organo | Front End - JavaScript e React
 ---
 
-### Projeto Organo densenvolvido para o curso da ONE em parceria com a Alura, utilizando html, css, javascript e react!
+### Projeto Organo densenvolvido para o curso da ONE em parceria com a Alura, utilizando html, css, javascript e react! Deploy feito através do Vercel.
+### Link para acesso: https://organo-react-moioeda9n-thatyane-carvalho-marques-projects.vercel.app
 
 ---
 
