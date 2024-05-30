@@ -4,7 +4,7 @@ import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
 import Botao from '../Botao';
 
-const Formulario = () => {
+const Formulario = (props) => {
     const equipes = [
         'Overwatch',
         'League of Legends',
@@ -19,7 +19,7 @@ const Formulario = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
-        console.log('Form foi submetido! => ', nickname, funcao, imagem, equipe);
+        props.aoMembroCadastrado({nickname, funcao, imagem, equipe});
     }
 
     return (
