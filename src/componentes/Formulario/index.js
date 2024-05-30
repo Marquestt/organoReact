@@ -5,13 +5,6 @@ import ListaSuspensa from '../ListaSuspensa';
 import Botao from '../Botao';
 
 const Formulario = (props) => {
-    const equipes = [
-        'Overwatch',
-        'League of Legends',
-        'Fortnite',
-        'Rocket League'
-    ]
-
     const [nickname, setNickname] = useState('');
     const [funcao, setFuncao] = useState('');
     const [imagem, setImagem] = useState('');
@@ -20,6 +13,10 @@ const Formulario = (props) => {
     const aoSalvar = (evento) => {
         evento.preventDefault();
         props.aoMembroCadastrado({nickname, funcao, imagem, equipe});
+        setNickname('');
+        setFuncao('');
+        setImagem('');
+        setEquipe('');
     }
 
     return (
@@ -29,7 +26,7 @@ const Formulario = (props) => {
                 <CampoTexto valor={nickname} aoAlterado={valor => setNickname(valor)} obrigatorio={true} label="Nickname" placeholder="Digite o seu nickname"/>
                 <CampoTexto valor={funcao} aoAlterado={valor => setFuncao(valor)} obrigatorio={true} label="Função" placeholder="Digite a função"/>
                 <CampoTexto valor={imagem} aoAlterado={valor => setImagem(valor)} label="Imagem" placeholder="Digite o endereço da imagem"/>
-                <ListaSuspensa valor={equipe} aoAlterado={valor => setEquipe(valor)} obrigatorio={true} label="Equipe" itens={equipes}/>
+                <ListaSuspensa valor={equipe} aoAlterado={valor => setEquipe(valor)} obrigatorio={true} label="Equipe" itens={props.equipes}/>
                 <Botao>
                     Criar card
                 </Botao>
